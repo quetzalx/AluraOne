@@ -1,0 +1,43 @@
+<meta charset = "utf-8">
+<h1> PROGRAMA 40</h1>
+<h2> Click izquierdo dibuja círculo, click derecho cambia color. </h2>
+<hr>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "grey";
+    pincel.fillRect(0,0,600,400);
+    var color = ["blue", "red", "green"];
+    var indice = 0;
+
+    function dibujarCirculo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        pincel.fillStyle = color[indice];
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.14);
+        pincel.fill();
+        console.log(x + "," + y);
+    }
+
+    pantalla.onclick = dibujarCirculo;
+
+    function alterarColor() {
+        if (indice!=2) {
+            indice++;
+        }
+        else {
+            indice=0;
+        }
+        var colorSP = ["azul", "rojo", "verde"]
+        alert("Cambiaste a color " + colorSP[indice]);
+        return false;
+    }
+
+    pantalla.oncontextmenu = alterarColor;
+
+</script>

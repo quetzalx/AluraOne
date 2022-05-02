@@ -1,0 +1,79 @@
+<meta charset = "utf-8">
+<h1> PROGRAMA 43</h1>
+<h2> Pincel con cambios de color </h2>
+<hr>
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0, 0, 600, 400);
+
+    var puedoDibujar = false;
+    var colores=["red","green","blue"];
+    var indice=0;
+
+    function dibujarCirculo(evento) {
+
+        if(puedoDibujar) {
+            var x = evento.pageX - pantalla.offsetLeft;
+            var y = evento.pageY - pantalla.offsetTop;
+            pincel.fillStyle = colores[indice];
+            pincel.beginPath();
+            pincel.arc(x, y, 5, 0, 2 * 3.14);
+            pincel.fill();
+        }
+    }
+
+    function paletaColores(){
+       var x=0;
+       for (i=0; i<=2; i++){
+            pincel.fillStyle=colores[i];
+            pincel.fillRect(x,0,50,50);
+            pincel.strokeStyle="black";
+            pincel.strokeRect(x,0,50,50);
+            x=x+50;
+        }
+    }
+
+    function seleccionaColor(evento){
+       var ejex = evento.pageX - pantalla.offsetLeft;
+       var ejey = evento.pageY - pantalla.offsetTop;
+       //alert("Entró y los valores de x y y son: "+ ejex +" y " + ejey);
+       if(ejex<50 && ejey<50){
+         indice=0;
+         alert("Cambiaste a color rojo");
+         return colores[indice];
+       }
+       else if (ejex>50 && ejex<100 && ejey<50) {
+         indice=1;
+         alert("Cambiaste a color verde");
+         return colores[indice];
+       }
+       else if (ejex>100 && ejex<150 && ejey<50) {
+         indice=2;
+         alert("Cambiaste a color azul");
+         return colores[indice];
+       }
+       //return false;
+    }
+
+    pantalla.onmousemove = dibujarCirculo;
+
+    function habilitarDibujar() {
+        puedoDibujar = true;
+    }
+
+    function deshabilitarDibujar() {
+        puedoDibujar = false;
+    }
+
+    paletaColores();
+
+    pantalla.onmousedown = habilitarDibujar;
+    pantalla.onmouseup = deshabilitarDibujar;
+    pantalla.ondblclick = seleccionaColor;
+
+</script>

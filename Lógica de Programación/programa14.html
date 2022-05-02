@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 14 </h1>
+<h2>Índice de Masa Corporal con Entrada y Salida</h2>
+<hr>
+<script>
+
+function saltarLinea() {
+    document.write("<br><br><br>");
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+function imc(peso, altura){
+    indice=peso/(altura*altura);
+    return indice
+}
+
+var nombre = prompt ("Hola, ¿Cómo te llamas? ")
+var ingresapeso = prompt(nombre + " ¿Cuál es tu peso? ");
+var ingresaaltura = prompt (nombre +" ¿Cuál es tu altura? ")
+
+var resultado = imc(ingresapeso, ingresaaltura)
+
+imprimir(nombre + " tu IMC es de: " + resultado);
+
+if (resultado<18.5){
+    imprimir(nombre + " estás bajo de peso");
+}
+if (resultado > 18.6 && resultado < 24.9){
+    imprimir(nombre + " tu peso es normal");
+}
+if (resultado >= 25 && resultado < 29.9){
+    imprimir(nombre + " tienes sobrepeso (preobesidad)");
+}
+if (resultado > 30 ){
+    imprimir(nombre + " padeces obesidad, consulta a tu médico");
+}
+
+</script>

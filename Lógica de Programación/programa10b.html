@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 10b </h1>
+<h2>Índice de Masa Corporal </h2>
+<hr>
+<script>
+
+function saltarLinea() {
+    document.write("<br><br><br>");
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+function imc(nombre, peso, altura){
+    indice=peso/(altura*altura);
+    imprimir ("El índice de masa corporal de " + nombre + " es: " + indice);
+    return indice
+}
+
+function imcPromedio(nombre1, peso1, altura1, nombre2, peso2, altura2){
+    indice1=peso1/(altura1*altura1);
+    indice2=peso2/(altura2*altura2);
+    promedio=(indice1+indice2)/2;
+    imprimir("El promedio del IMC de "+nombre1+" y "+nombre2+" es: "+promedio)
+}
+//var alturaBernie = 1.77;
+//var pesoBernie = 80;
+//var imcBernie = pesoBernie/(alturaBernie*alturaBernie);
+
+//imprimir("El índice de masa corporal de Bernardo es: "+imcBernie);
+
+//var alturaFelipe = 1.72;
+//var pesoFelipe = 71;
+//var imcFelipe = pesoFelipe/(alturaFelipe*alturaFelipe);
+
+//imprimir("El índice de masa corporal de Felipe es: "+imcFelipe);
+
+indiceBernardo=imc("Bernardo", 80, 1.77);
+indiceChristian=imc("Christian", 71, 1.72);
+
+imprimir("El promedio del IMC es:" + (indiceBernardo+indiceChristian)/2)
+imcPromedio("Bernardo", 80, 1.77, "Christian", 71, 1.72);
+
+</script>

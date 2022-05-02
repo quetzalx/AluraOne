@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 26 </h1>
+<h2>El juego secreto</h2>
+<hr>
+
+<input/>
+<button> Adivinar </button>
+
+
+<script>
+   var secreto=5;
+   var input=document.querySelector("input");
+
+   function verificar(){
+       if (parseInt(input.value)==secreto){
+          alert("Acertaste");
+       }
+       else{
+          alert("No le atinaste")
+       }
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>

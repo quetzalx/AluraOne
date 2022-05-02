@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 10 </h1>
+<h2>Índice de Masa Corporal </h2>
+<hr>
+<script>
+
+function saltarLinea() {
+    document.write("<br><br><br>");
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+function imc(peso, altura){
+    indice=peso/(altura*altura);
+    return indice
+}
+
+var imcBernie=imc(80,1.77);
+var imcChristian=imc(71,1.72);
+
+imprimir("El promedio del IMC de Bernardo y Christian es: " + (imcBernie+imcChristian)/2);
+
+</script>

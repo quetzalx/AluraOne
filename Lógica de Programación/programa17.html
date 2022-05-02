@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 17 </h1>
+<h2>Sortear número</h2>
+<hr>
+<script>
+
+function saltarLinea() {
+    document.write("<br><br><br>");
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+function sortea(numero){
+    return (Math.round(Math.random()*numero));
+}
+
+var nombre = prompt("¡Hola!, ¿cómo te llamas?");
+var numeroLanzado=parseInt(prompt(nombre + "  ingresa hasta qué número sortearás: "));
+var resultado=sortea(numeroLanzado);
+var numeroApostado=parseInt(prompt(nombre + " a cuál le apuestas:"));
+
+if (resultado==numeroApostado){
+    imprimir ("¡Muy bien " + nombre + " GANASTE!" )
+}
+else {
+    imprimir ("Lo siento " + nombre + " el número ganador era: " + resultado);
+}
+
+</script>

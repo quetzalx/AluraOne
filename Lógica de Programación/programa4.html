@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+
+<script>
+   var anyo = new Date();
+
+   document.write("La edad de Juan es: " + (1900+anyo.getYear()-1998) + " años");
+   document.write("<br>");
+   document.write("La edad de Luis es: " + (1900+anyo.getYear()-1993) + " años");
+   document.write("<br>");
+   document.write("La edad de Cristian es: " + (1900+anyo.getYear()-2007) + " años");
+   document.write("<br>");
+   document.write("<br>");
+   document.write("La edad de Jimena es: " + (1900+anyo.getYear()-2010) + " años");
+   document.write("<br>");
+   document.write("La edad de Paola es: " + (1900+anyo.getYear()-1995) + " años");
+   document.write("<br>");
+   document.write("La edad de Laura es: " + (1900+anyo.getYear()-2005) + " años");
+   document.write("<br>");
+   document.write("<br>");
+
+   var edadJimena = (1900+anyo.getYear()-2010);
+   var edadPaola = (1900+anyo.getYear()-1995);
+   var edadLaura = (1900+anyo.getYear()-2005);
+
+   var nombre1 = " Jimena";
+   var nombre2 = " Paola";
+   var nombre3 = " Laura";
+    
+   promedio = (edadJimena+edadPaola+edadLaura)/3;
+   document.write("El promedio de las edades de" + nombre1 + "," + nombre2 +" y" + nombre3 + " es: " + Math.round(promedio) + " años");
+</script>
+   

@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 25 </h1>
+<h2>Tres intentos para acceder</h2>
+<hr>
+
+<script>
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+    var contador=1;
+    while (contador<=3){
+
+        var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+        var contrasenhaIngresada = prompt("Ingrese su contraseña");
+
+        if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) {
+            alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+            break;
+        } else {
+            alert("inicio de sesión inválido. Cuenta bloqueada");
+        }
+        contador++;
+    }
+</script>

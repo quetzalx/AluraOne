@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 16 </h1>
+<h2>Licencia de conducir</h2>
+<hr>
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    var tieneLicencia = prompt("¿Tienes licencia? Responde S o N:");
+
+    if (edad >= 18){
+       if (tieneLicencia=="S"){
+          alert("Muy bien, puedes conducir");
+       }
+       else{
+          alert("Por ahora no puedes conducir")
+       }
+     }
+    else if(edad < 18 || tieneLicencia!="S"){
+       alert("Por ahora no puedes conducir");
+    }
+</script>

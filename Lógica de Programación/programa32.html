@@ -1,0 +1,24 @@
+<meta charset = "utf-8">
+<h1> PROGRAMA 32</h1>
+<h2> Creeper </h2>
+<hr>
+
+<<canvas width="350" height="300"></canvas>
+
+<script>
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "#176400";
+    pincel.fillRect(0,0,350,300);
+
+    pincel.fillStyle = "black";
+    // ojos
+    pincel.fillRect(55,50,90,90);
+    pincel.fillRect(205,50,90,90);
+    //nariz
+    pincel.fillRect(145,140,60,100);
+    //bigotes
+    pincel.fillRect(105,180,40,120);
+    pincel.fillRect(205,180,40,120);
+</script>

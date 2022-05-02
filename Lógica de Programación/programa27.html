@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 27 </h1>
+<h2>El juego secreto mejorado</h2>
+<hr>
+
+<input/>
+<button> Adivinar </button>
+
+
+<script>
+   var secreto=Math.round(Math.random()*10);
+   var input=document.querySelector("input");
+   input.focus();
+
+   function verificar(){
+       if (parseInt(input.value)==secreto){
+          alert("Acertaste");
+       }
+       else{
+          alert("No le atinaste")
+       }
+       input.value = "";
+       input.focus();
+     }
+
+    var button = document.querySelector("button");
+    button.onclick = verificar;
+
+</script>

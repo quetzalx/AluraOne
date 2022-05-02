@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 12 </h1>
+<h2>Índice de Masa Corporal con Entrada</h2>
+<hr>
+<script>
+
+function saltarLinea() {
+    document.write("<br><br><br>");
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+function imc(peso, altura){
+    indice=peso/(altura*altura);
+    return indice
+}
+
+var nombre = prompt ("Hola, ¿Cómo te llamas? ")
+var ingresapeso = prompt(nombre + " ¿Cuál es tu peso? ");
+var ingresaaltura = prompt (nombre +" ¿Cuál es tu altura? ")
+
+
+imprimir(nombre + " tu IMC es de: " + imc(ingresapeso, ingresaaltura));
+
+</script>

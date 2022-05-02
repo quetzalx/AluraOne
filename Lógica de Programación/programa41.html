@@ -1,0 +1,49 @@
+<meta charset = "utf-8">
+<h1> PROGRAMA 41</h1>
+<h2> Función circunferencia que rebota </h2>
+<hr>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+    pincel.fillStyle = "lightgrey";
+    pincel.fillRect(0,0,600,400);
+
+    function disenharCircunferencia(x,y,r){
+        pincel.fillStyle = "blue"
+        pincel.beginPath();
+        pincel.arc(x,y,r,0,Math.PI*2);
+        pincel.closePath();
+        pincel.fill();
+
+    }
+
+    function limpiarPantalla(){
+        pincel.clearRect(0,0,600,400);
+    }
+
+    var x=20;
+    var z=580;
+    function actualizarPantalla(){
+          limpiarPantalla();
+          disenharCircunferencia(x,20,10);
+          if (x<=580){
+             x++;
+          }
+          else if (z>=20){
+             limpiarPantalla();
+             disenharCircunferencia(z,20,10);
+             z--;
+          }
+          else {
+            x=20;
+            z=580;
+          }
+      }
+
+    setInterval(actualizarPantalla,5);
+
+</script>

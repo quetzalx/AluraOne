@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 19 </h1>
+<h2>Año de los mundiales de la FIFA</h2>
+<hr>
+<script>
+
+function saltarLinea() {
+    document.write("<br><br><br>");
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+var anhoMundial=1930;
+var anhoLimite=parseInt(prompt("¿Hasta que año quieres saber los mundiales?"))
+
+while (anhoMundial<=anhoLimite){
+    imprimir ("Hubo mundial de la FIFA en el año " + anhoMundial);
+    anhoMundial=anhoMundial+4;
+}
+
+</script>

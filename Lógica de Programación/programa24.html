@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 24 </h1>
+<h2>Estrellas</h2>
+<hr>
+<script>
+
+function saltarLinea() {
+    document.write("<br><br><br>");
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+for (var lineas=1;lineas<=3;lineas++){
+   for(estrella=1;estrella<=10;estrella++){
+      document.write("*");
+   }
+   saltarLinea();
+}
+
+imprimir("FIN");
+
+</script>

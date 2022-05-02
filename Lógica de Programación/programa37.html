@@ -1,0 +1,48 @@
+<meta charset = "utf-8">
+<h1> PROGRAMA 37</h1>
+<h2> Gráfico de Barras </h2>
+<hr>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function dibujarRectangulo(x, y, base, altura, color) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.fillStyle=color;
+        pincel.fillRect(x,y, base, altura);
+        pincel.strokeStyle="black";
+        pincel.strokeRect(x,y, base, altura);
+    }
+
+    function escribirTexto(x , y, texto) {
+        var pantalla = document.querySelector("canvas");
+        var pincel = pantalla.getContext("2d");
+
+        pincel.font="20px serif";
+        pincel.fillStyle="black";
+        pincel.fillText(texto, x, y);
+    }
+
+    function dibujarBarra(x, y, serie, colores, texto){
+        var contador=0;
+        var esquina=0;
+        escribirTexto(x,y-10,texto);
+        while (contador < serie.length){
+            dibujarRectangulo(x, y+esquina, 50, serie[contador], colores[contador]);
+            esquina=esquina+serie[contador];
+            //alert(inicio + " " + colores[contador] + " " + serie[contador]+ " " + contador);
+            contador++;
+        }
+    }
+
+    var serie2009 = [6, 47, 41, 3, 3];
+    var serie2019 = [81, 9, 3, 3, 4];
+    var colores = ["blue","green","yellow", "red","gray"];
+
+    dibujarBarra(50, 50, serie2009, colores, "2009");
+    dibujarBarra(150, 50, serie2019, colores, "2019");
+
+</script>

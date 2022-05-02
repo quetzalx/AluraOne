@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<h1> PROGRAMA 20 </h1>
+<h2>Tablas de multiplicar</h2>
+<hr>
+<script>
+
+function saltarLinea() {
+    document.write("<br><br>");
+}
+
+function imprimir(frase) {
+    document.write("<big>"+frase+"</big>");
+    saltarLinea();
+}
+
+var multiplicador=1;
+var tabla=parseInt(prompt("¿Qué tabla quieres mostrar?"));
+
+imprimir("WHILE");
+while (multiplicador<=10){
+    var resultado=multiplicador*tabla;
+    imprimir(multiplicador + " por " + tabla + " es igual a " + resultado);
+    multiplicador++;
+}
+
+imprimir("<hr>")
+imprimir("FOR")
+for (multiplicador=1;multiplicador<=10;multiplicador++){
+    resultado=multiplicador*tabla;
+    imprimir(multiplicador + " por " + tabla + " es igual a " + resultado);
+}
+
+</script>
