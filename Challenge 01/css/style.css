@@ -1,0 +1,23 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+
+.grid {
+   background: #F3F5FC;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+
+.titulo{
+//   grid-column-start: 1;
+   grid-column-end: span 1;
+}
+
+.texto-cifrado{
+   grid-row-end: span 4;
+}
+
+.grid div:nth-child(2){
+   background: white;
+}
