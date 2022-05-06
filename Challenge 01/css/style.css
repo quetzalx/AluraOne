@@ -4,6 +4,7 @@
 }
 
 .grid {
+   margin: 10px;
    background: #F3F5FC;
    display: grid;
    grid-template-columns: 1fr 1fr;
