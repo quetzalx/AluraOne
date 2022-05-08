@@ -14,19 +14,19 @@
           <div class="titulo"><img src="images/logo.png" alt="Logo Alura"></div>
           <div class="texto-cifrado">
               <img id="muneco" class="doll" src="images/doll.png" alt="Persona Buscando">
-              <!--<img id="diamante" class="doll" src="images/diamod.png" alt="Diamante">-->
               <br>
-               <textarea id="textoCifrado" class="caja-tc"></textarea><br>
-                <!--<img src="images/doll.png" class="doll">-->
-                <input type="button" id="copiar" value="Copiar texto" class=botonED>
+              <p class="parrafoMuneco" id="sinTexto">No has ingresado algún mensaje</p>
+              <p class="parrafoMunecoBis" id="sinTextoDos">Ingresa el texto a encriptar o descifrar</p>
+               <textarea hidden readonly id="textoCifrado" class="caja-tc"></textarea><br>
+                <input type="button" id="copiar" value="Copiar texto" class=botonCopiar>
           </div>
           <div class="texto-plano">
               <!--<input id="textoPlano" type="text" class="caja-tp" value="" required placeholder="Pega o escribe el texto que deseas cifrar">-->
-              <textarea id="textoPlano" class="caja-tp" placeholder="     Pega o escribe el texto que deseas cifrar o descifrar"></textarea>
+              <textarea id="textoPlano" class="caja-tp" placeholder="     Ingresa el texto que deseas cifrar o descifrar"></textarea>
 
           </div>
           <div class="botones">
-               <p class="parrafo">Utiliza sólo minúsculas y sin acentos.</p><br>
+              <img class="aclaracion" src="images/vector.png" alt="Advertencia"><p class="parrafo" id="indicacion">  Utiliza sólo minúsculas y sin acentos.</p><br>
                <input type="button" class="botonED" id="encripta" value="Encriptar" onclick="encriptaTexto()">
                <input type="button" class="botonED" id="descifra" value="Descifrar" onclick="descifraTexto()">
           </div>

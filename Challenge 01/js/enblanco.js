@@ -8,12 +8,21 @@ textoPlano.addEventListener("input", function(event){
            if (!expresion.test(contenido)){
               /*console.log("No muestra el muñeco");*/
               document.getElementById("muneco").style.display="none";
+              document.getElementById("sinTexto").style.display="none";
+              document.getElementById("sinTextoDos").style.display="none";
+              document.getElementById("textoCifrado").style.display="revert";
            }else{
               /*console.log("Muestra al muñeco");*/
-              document.getElementById("muneco").style.visibility="initial"
+              document.getElementById("muneco").style.visibility="flex";
+              document.getElementById("sinTexto").style.visibility="revert";
+              document.getElementById("sinTextoDos").style.visibility="revert";
+              document.getElementById("textoCifrado").style.visibility="none";
               }
-   }else{        
-        console.log("Muestra el muñeco 2");
-        document.getElementById("muneco").style.display="initial";
+   }else{
+        /*console.log("Muestra el muñeco 2");*/
+        document.getElementById("muneco").style.display="flex";
+        document.getElementById("sinTexto").style.display="revert";
+        document.getElementById("sinTextoDos").style.display="revert";
+        document.getElementById("textoCifrado").style.display="none";
       }
 });

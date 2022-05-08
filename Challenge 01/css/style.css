@@ -10,8 +10,9 @@
    display: grid;
    grid-template-columns: 1fr 40%;
    /*grid-template-rows: 40px 4em 40px;*/
-   grit-auto-rows: minmax(700px,auto);
-   grid-gap: 10px
+   grid-auto-rows: minmax(30px,auto);
+   grid-gap: 10px;
+   justify-content: center;
 }
 
 .titulo{
@@ -34,14 +35,26 @@
     /*min-height: 100%;*/
     box-sizing: border-box;
     resize: none;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 
-.textarea{
-    width: 100%;
+.caja-tc{
+  border: none;
+  width: 70%;
+  padding: 50px;
+  margin: auto;
+  border-radius: 20px;
+  height: auto;
+  resize: none;
 }
 
 .texto-cifrado{
-   position: flex;
+   /*position: flex;*/
    margin-top: 20px;
    margin-right: 20px;
    border-radius: 20px;
@@ -50,11 +63,39 @@
    /*grid-template-rows: minmax(100px, auto);*/
 }
 
+#textoCifrado{
+   margin-left: 20px;
+   margin-right: 20px;
+}
+
 .texto-plano{
+  padding: 20px;
   margin-top: 20px;
   margin-right: 20px;
   border-radius: 20px;
   grid-row-end: span 10;
+}
+
+#indicacion{
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  /*padding: 30px;*/
+  color: #495057;
+}
+
+.aclaracion{
+  float: left;
+  padding-left: 20px;
+  /*position: flex;*/
+  height: 13px;
+  width: 13px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
 }
 
 .grid div:nth-child(2){
@@ -72,8 +113,11 @@
 }
 
 .doll{
-   margin: auto;
-   width: 50%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 30px;
+   width: 60%;
    border-radius: 20px;
    background-color: white;
 }
@@ -90,14 +134,73 @@
    margin-right: 20px;*/
    text-align: center;
    transition: 0.4s;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+
+   justify-content: center;
 }
 
 .botonED:hover{
    background-color: #0A3871;
    color: white;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+   text-align: center;
 }
 
-.parrafo{
-    jscolor: red;
+.botonCopiar{
+   display: block;
+   margin-top: 50px;
+   margin-left: auto;
+   margin-right: auto;
+   width: 300px;
+   height: 67px;
+   border-color: #0A3871;
+   border-width: thin;
+   border-radius: 24px;
+   background-color: #D8DFE8;
+   text-align: center;
+   transition: 0.4s;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+}
+
+.botonCopiar:hover{
+   background-color: #0A3871;
+   color: white;
+   font-family: 'Inter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 19px;
+   text-align: center;
+}
+
+.parrafoMuneco{
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
     text-align: center;
+    background: white;
+}
+
+.parrafoMunecoBis{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: center;
+  background: white;
 }
