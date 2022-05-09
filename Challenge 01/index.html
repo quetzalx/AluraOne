@@ -22,8 +22,8 @@
               <br>
               <p class="parrafoMuneco" id="sinTexto">No has ingresado algún mensaje</p>
               <p class="parrafoMunecoBis" id="sinTextoDos">Ingresa el texto a encriptar o descifrar</p>
-               <textarea hidden readonly id="textoCifrado" class="caja-tc" placeholder="  El texto cifrado o descifrado aparecerá aquí"></textarea><br>
-                <input type="button" id="copiar" value="Copiar texto" class=botonCopiar>
+              <textarea hidden readonly id="textoCifrado" class="caja-tc" placeholder="  El texto cifrado o descifrado aparecerá aquí"></textarea><br>
+              <input type="button" class=botonCopiar id="copiarTCD" value="Copiar texto" onclick="copiaTextoCD()">
           </div>
           <div class="texto-plano">
               <!--<input id="textoPlano" type="text" class="caja-tp" value="" required placeholder="Pega o escribe el texto que deseas cifrar">-->
@@ -31,7 +31,7 @@
 
           </div>
           <div class="botones">
-              <img class="aclaracion" src="images/vector.png" alt="Advertencia"><p class="parrafo" id="indicacion">  Utiliza sólo minúsculas y sin acentos.</p><br>
+              <img class="aclaracion" src="images/vector.png" alt="Advertencia"><p class="parrafo" id="indicacion">  Utiliza sólo minúsculas y sin signos de puntuación.</p><br>
                <input type="button" class="botonED" id="encripta" value="Encriptar" onclick="encriptaTexto()">
                <input type="button" class="botonED" id="descifra" value="Descifrar" onclick="descifraTexto()">
           </div>
@@ -40,5 +40,6 @@
     </main>
     <script src="js/enblanco.js"></script>
     <script src="js/encriptaDescifra.js"></script>
+    <script src="js/copiar.js"></script>
   </body>
 </html>

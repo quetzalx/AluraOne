@@ -24,5 +24,6 @@ textoPlano.addEventListener("input", function(event){
         document.getElementById("sinTexto").style.display="revert";
         document.getElementById("sinTextoDos").style.display="revert";
         document.getElementById("textoCifrado").style.display="none";
+        document.getElementById("textoCifrado").value='';
       }
 });

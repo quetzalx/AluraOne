@@ -21,26 +21,10 @@ function encriptaTexto(){
 
 function descifraTexto(){
     var textoADescifrar=document.querySelector("#textoPlano").value;
-    const vocales=['e', 'i', 'a', 'o', 'u'];
-    const llave =['enter', 'imes', 'ai', 'ober', 'ufat']
-    const textoEnArreglo = textoADescifrar.split('');
-    const texto=textoADescifrar;
-
-/*    for (var i = 0; i < 4; i++) {
-        textoF=texto.replace(/llave[i]/g,vocales[i]);
-        console.log(texto);
-    }
-*/
     textof=textoADescifrar.replace(/enter/g,'e');
-    console.log(textof);
     textofuno=textof.replace(/imes/g,'i');
-    console.log(textofuno);
     textofdos=textofuno.replace(/ai/g,'a');
-    console.log(textofdos);
     textoftres=textofdos.replace(/ober/g,'o');
-    console.log(textoftres);
     textofcuatro=textoftres.replace(/ufat/g,'u');
-
-    console.log(textofcuatro);
     textoACaja.value=textofcuatro;
 }
