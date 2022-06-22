@@ -1,0 +1,62 @@
+nav li{
+  display: inline;
+  margin: 0 0 0 15px;
+}
+
+.titulo-principal{
+  text-align: center;
+  font-size: 2em;
+  margin: 1em 0 1em;
+  clear: left;
+  -webkit-text-stroke: 1px yellow;
+}
+
+.caja-titulo{
+  background: gray;
+  border: 5px solid gray;
+  border-radius: 5px;
+}
+
+.lista-mishtmls{
+  text-color: red;
+  border-color: black;
+  border-width: thick;
+  text-align: center;
+  font-size: 2em;
+  margin: 1em 0 1em;
+  clear: left;
+}
+
+.Tercias{
+  display: flex;
+}
+
+.items {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+  /*border-color: black;
+  padding-left: 30px;
+  padding-top: 10px;*/
+}
+
+.items:before{
+  content: "☛";
+}
+
+.botonesEj{
+  font-family: sans-serif;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.botonesEj:hover{
+  background: burlywood;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.imagenBoton{
+  max-width: 30%;
+  max-height: none;
+}
